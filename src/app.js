@@ -14,3 +14,4 @@ return `${day}, ${hours}:${minutes}`;
 let currentWeather= new Date();
 let realTme= document.querySelector("#current-date");
 realTme.innerHTML=formattedTime(currentWeather);
+fdh
