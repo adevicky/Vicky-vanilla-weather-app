@@ -23,10 +23,16 @@ function displayWeatherCondition(response) {
       document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
     }
 
+function search(city) {
+   let apiKey= "6e28aff5cc0608c0525e4afec6ebc572";
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`; 
+axios.get(apiUrl).then(displayWeatherCondition);
+
+ }
 function searchCurrentCity(event) {
     event.preventDefault();
-    let city= "New York";
-    let newCity= document.querySelector("#city-input").value
+    let city="New York";
+    let newCity= document.querySelector("#city-input");
 search(city)
 }
 
